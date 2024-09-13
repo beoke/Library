@@ -60,7 +60,8 @@ namespace Library
                           // Memeriksa apakah ada data yang sesuai
                           if (ds.Tables[0].Rows.Count > 0)
                           {
-                              MessageBox.Show("Login Sukses!");
+                              Dashboard dasbor = new Dashboard();
+                              dasbor.Show();
                           }
                           else
                           {
