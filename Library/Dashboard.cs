@@ -23,6 +23,13 @@ namespace Library
         {
             Exit_Tools.Click += Exit_Tools_Click;
             AddBook_Tool.Click += AddBook_Tool_Click;
+            ViewBook_Tool.Click += ViewBook_Tool_Click;
+        }
+
+        private void ViewBook_Tool_Click(object sender, EventArgs e)
+        {
+            Form_ViewBook vb = new Form_ViewBook();
+            vb.Show();
         }
 
         private void AddBook_Tool_Click(object sender, EventArgs e)

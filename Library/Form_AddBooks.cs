@@ -30,7 +30,7 @@ namespace Library
 
         private void Cancel_Button_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Convinced not to store data?", "Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.OK)
+            if(MessageBox.Show("Convinced not to store data?", "Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
                  
             {
                 this.Close();
