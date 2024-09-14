@@ -15,7 +15,31 @@ namespace Library
         public Dashboard()
         {
             InitializeComponent();
+
+            OrganizeEvent();
+        }
+        #region PENGATURAN EVENT
+        private void OrganizeEvent()
+        {
+            Exit_Tools.Click += Exit_Tools_Click;
+            AddBook_Tool.Click += AddBook_Tool_Click;
         }
 
+        private void AddBook_Tool_Click(object sender, EventArgs e)
+        {
+            Form_AddBooks anb = new Form_AddBooks();
+            anb.Show();
+        }
+
+        private void Exit_Tools_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you Sure You Wanr Exit.?","Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+         
+        }
+
+        #endregion
     }
 }

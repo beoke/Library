@@ -65,7 +65,7 @@ namespace Library
                           }
                           else
                           {
-                              MessageBox.Show("Username atau Password Salah.");
+                              MessageBox.Show("Username or Password Incorrect.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                           }
                       }
                   }

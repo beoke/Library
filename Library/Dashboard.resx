@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addNewBookToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddBook_Tool.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAspJREFUaEPt
         l0FrE0EYhoOgfyjHbrAkMbs0myrFKFWhRxW8eBWFgAhWqagoIghJbFAUxFJFUI/ixWMvKlqpVLsqimhP
@@ -435,7 +435,7 @@
         ZjFugXf8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="exitToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Exit_Tools.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABStJREFUaEPd
         mllvG1UUgPPDygsviBZKNseexR4vY3tsx0uz2EkhaaBLSpukbUhDs6dulYVmb5JmaQVVVUBlaYGyqpS+

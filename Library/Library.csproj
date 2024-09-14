@@ -55,11 +55,17 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\ConStringHelper.cs" />
-    <Compile Include="Login\Login.cs">
+    <Compile Include="Form_AddBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\Login.Designer.cs">
+    <Compile Include="Form_AddBooks.Designer.cs">
+      <DependentUpon>Form_AddBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ConStringHelper.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -67,7 +73,10 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\Login.resx">
+    <EmbeddedResource Include="Form_AddBooks.resx">
+      <DependentUpon>Form_AddBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -94,7 +103,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Login\Login.sql" />
+    <Content Include="Script Table\Login.sql" />
+    <Content Include="Script Table\NewBook.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
