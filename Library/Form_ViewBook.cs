@@ -21,6 +21,7 @@ namespace Library
             InitializeComponent();
 
             OrganizeEvent();
+           
         }
         private void OrganizeEvent()
         {
@@ -31,15 +32,50 @@ namespace Library
             Refresh_Button.Click += Refresh_Button_Click;
            
         }
+        private void CustomGrid()
+        {
+                // Mengatur nama kolom
+                Grid_viewBook.Columns[0].HeaderText = "ID Buku";
+                Grid_viewBook.Columns[1].HeaderText = "Nama Buku";
+                Grid_viewBook.Columns[2].HeaderText = "Penulis";
+                Grid_viewBook.Columns[3].HeaderText = "Penerbitan";
+                Grid_viewBook.Columns[4].HeaderText = "Tanggal Pembelian";
+                Grid_viewBook.Columns[5].HeaderText = "Harga";
+                Grid_viewBook.Columns[6].HeaderText = "Kuantitas";
 
+                // Mengatur ukuran kolom
+                Grid_viewBook.Columns[0].Width = 70;
+                Grid_viewBook.Columns[1].Width = 150;
+                Grid_viewBook.Columns[2].Width = 150;
+                Grid_viewBook.Columns[3].Width = 150;
+                Grid_viewBook.Columns[4].Width = 200;
+                Grid_viewBook.Columns[5].Width = 75;
+                Grid_viewBook.Columns[6].Width = 75;
+        }
 
         #region EVENT 
         private void Refresh_Button_Click(object sender, EventArgs e)
         {
             BookNameSearch_text.Clear();
             PanelData.Visible = false;
+            RefreshData();
         }
+        private void RefreshData()
+        {
+            using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
 
+                cmd.CommandText = "select * from NewBook";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                Grid_viewBook.DataSource = ds.Tables[0];
+                CustomGrid();
+            }
+        }
         private void Update_Button_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Data will be UPDATE. Confirm?", "Sucsess", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -61,6 +97,8 @@ namespace Library
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                 }
+                CustomGrid();
+                RefreshData();
             }
         }
 
@@ -78,6 +116,8 @@ namespace Library
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                 }
+                CustomGrid();
+                RefreshData();
             }
         }
 
@@ -116,25 +156,14 @@ namespace Library
                 Text_BookPurchaseDate.Text = ds.Tables[0].Rows[0][4].ToString();
                 Text_BookPrice.Text = ds.Tables[0].Rows[0][5].ToString();
                 Text_BookQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
+                CustomGrid();
             }
         }
 
         private void Form_ViewBook_Load(object sender, EventArgs e)
         {
             PanelData.Visible = false;
-            using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-
-                cmd.CommandText = "select * from NewBook";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                Grid_viewBook.DataSource = ds.Tables[0];
-            }
-            
+            RefreshData();
         }
         #endregion
 
@@ -156,6 +185,7 @@ namespace Library
                 da.Fill(ds);
 
                 Grid_viewBook.DataSource = ds.Tables[0];
+                CustomGrid();
             }
         }
     }
