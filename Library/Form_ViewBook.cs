@@ -34,23 +34,32 @@ namespace Library
         }
         private void CustomGrid()
         {
-                // Mengatur nama kolom
-                Grid_viewBook.Columns[0].HeaderText = "ID Buku";
-                Grid_viewBook.Columns[1].HeaderText = "Nama Buku";
-                Grid_viewBook.Columns[2].HeaderText = "Penulis";
-                Grid_viewBook.Columns[3].HeaderText = "Penerbitan";
-                Grid_viewBook.Columns[4].HeaderText = "Tanggal Pembelian";
-                Grid_viewBook.Columns[5].HeaderText = "Harga";
-                Grid_viewBook.Columns[6].HeaderText = "Kuantitas";
+            // Mengatur nama kolom
+            Grid_viewBook.Columns[0].HeaderText = "ID Buku";
+            Grid_viewBook.Columns[1].HeaderText = "Nama Buku";
+            Grid_viewBook.Columns[2].HeaderText = "Penulis";
+            Grid_viewBook.Columns[3].HeaderText = "Penerbitan";
+            Grid_viewBook.Columns[4].HeaderText = "Tanggal Pembelian";
+            Grid_viewBook.Columns[5].HeaderText = "Harga";
+            Grid_viewBook.Columns[6].HeaderText = "Kuantitas";
 
-                // Mengatur ukuran kolom
-                Grid_viewBook.Columns[0].Width = 70;
-                Grid_viewBook.Columns[1].Width = 150;
-                Grid_viewBook.Columns[2].Width = 150;
-                Grid_viewBook.Columns[3].Width = 150;
-                Grid_viewBook.Columns[4].Width = 200;
-                Grid_viewBook.Columns[5].Width = 75;
-                Grid_viewBook.Columns[6].Width = 75;
+            // Mengatur ukuran kolom
+            Grid_viewBook.Columns[0].Width = 70;
+            Grid_viewBook.Columns[1].Width = 150;
+            Grid_viewBook.Columns[2].Width = 150;
+            Grid_viewBook.Columns[3].Width = 150;
+            Grid_viewBook.Columns[4].Width = 200;
+            Grid_viewBook.Columns[5].Width = 75;
+            Grid_viewBook.Columns[6].Width = 75;
+        }
+        private void ClearData()
+        {
+            Text_BookName.Clear();
+            Text_BookAuthor.Clear();
+            text_BookPublication.Clear();
+            text_BookPublication.Clear();
+            Text_BookPrice.Clear();
+            Text_BookQuantity.Clear();
         }
 
         #region EVENT 
@@ -99,6 +108,7 @@ namespace Library
                 }
                 CustomGrid();
                 RefreshData();
+                ClearData();
             }
         }
 
@@ -118,6 +128,7 @@ namespace Library
                 }
                 CustomGrid();
                 RefreshData();
+                ClearData();
             }
         }
 
