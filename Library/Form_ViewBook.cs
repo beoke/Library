@@ -42,12 +42,43 @@ namespace Library
 
         private void Update_Button_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (MessageBox.Show("Data will be UPDATE. Confirm?", "Sucsess", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                string bname = Text_BookName.Text;
+                string bauthor = Text_BookAuthor.Text;
+                string publication = text_BookPublication.Text;
+                string pdate = Text_BookPurchaseDate.Text;
+                Int64 price = Int64.Parse(Text_BookPrice.Text);
+                Int64 quan = Int64.Parse(Text_BookQuantity.Text);
+
+                using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "update NewBook set bName = '" + bname + "',bAuthor = '" + bauthor + "',bPublic = '" + publication + "',bPDate = '" + pdate + "',bPrice = " + price + ",bQuan = " + quan + " where bid=" + rowid + "";
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                }
+            }
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (MessageBox.Show("Data will Deleted. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "delete from NewBook where bid="+rowid+"";
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                }
+            }
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
@@ -58,6 +89,7 @@ namespace Library
 
         #region GRID
         int bid = 0;
+        Int64 rowid; 
         private void Grid_viewBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (Grid_viewBook.Rows[e.RowIndex].Cells[0].Value != null)
@@ -76,10 +108,12 @@ namespace Library
                 DataSet ds = new DataSet();
                 da.Fill(ds);
 
+                rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
+
                 Text_BookName.Text = ds.Tables[0].Rows[0][1].ToString();
                 Text_BookAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
                 text_BookPublication.Text = ds.Tables[0].Rows[0][3].ToString();
-                Text_BookPurchase.Text = ds.Tables[0].Rows[0][4].ToString();
+                Text_BookPurchaseDate.Text = ds.Tables[0].Rows[0][4].ToString();
                 Text_BookPrice.Text = ds.Tables[0].Rows[0][5].ToString();
                 Text_BookQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
             }

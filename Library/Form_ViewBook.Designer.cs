@@ -37,7 +37,7 @@
             this.Refresh_Button = new System.Windows.Forms.Button();
             this.Grid_viewBook = new System.Windows.Forms.DataGridView();
             this.PanelData = new System.Windows.Forms.Panel();
-            this.Text_BookPurchase = new System.Windows.Forms.TextBox();
+            this.Text_BookPurchaseDate = new System.Windows.Forms.TextBox();
             this.Update_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
             this.Cancel_Button = new System.Windows.Forms.Button();
@@ -130,7 +130,7 @@
             // PanelData
             // 
             this.PanelData.BackColor = System.Drawing.Color.Silver;
-            this.PanelData.Controls.Add(this.Text_BookPurchase);
+            this.PanelData.Controls.Add(this.Text_BookPurchaseDate);
             this.PanelData.Controls.Add(this.Update_Button);
             this.PanelData.Controls.Add(this.Delete_Button);
             this.PanelData.Controls.Add(this.Cancel_Button);
@@ -150,12 +150,12 @@
             this.PanelData.Size = new System.Drawing.Size(953, 270);
             this.PanelData.TabIndex = 5;
             // 
-            // Text_BookPurchase
+            // Text_BookPurchaseDate
             // 
-            this.Text_BookPurchase.Location = new System.Drawing.Point(594, 52);
-            this.Text_BookPurchase.Name = "Text_BookPurchase";
-            this.Text_BookPurchase.Size = new System.Drawing.Size(230, 20);
-            this.Text_BookPurchase.TabIndex = 15;
+            this.Text_BookPurchaseDate.Location = new System.Drawing.Point(640, 55);
+            this.Text_BookPurchaseDate.Name = "Text_BookPurchaseDate";
+            this.Text_BookPurchaseDate.Size = new System.Drawing.Size(230, 20);
+            this.Text_BookPurchaseDate.TabIndex = 15;
             // 
             // Update_Button
             // 
@@ -193,7 +193,7 @@
             // Text_BookQuantity
             // 
             this.Text_BookQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_BookQuantity.Location = new System.Drawing.Point(594, 144);
+            this.Text_BookQuantity.Location = new System.Drawing.Point(640, 146);
             this.Text_BookQuantity.Name = "Text_BookQuantity";
             this.Text_BookQuantity.Size = new System.Drawing.Size(230, 22);
             this.Text_BookQuantity.TabIndex = 10;
@@ -201,7 +201,7 @@
             // Text_BookPrice
             // 
             this.Text_BookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_BookPrice.Location = new System.Drawing.Point(594, 98);
+            this.Text_BookPrice.Location = new System.Drawing.Point(640, 98);
             this.Text_BookPrice.Name = "Text_BookPrice";
             this.Text_BookPrice.Size = new System.Drawing.Size(230, 22);
             this.Text_BookPrice.TabIndex = 9;
@@ -254,11 +254,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(442, 51);
+            this.label6.Location = new System.Drawing.Point(442, 53);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.Size = new System.Drawing.Size(174, 20);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Book Purchase";
+            this.label6.Text = "Book Purchase Date";
             // 
             // label5
             // 
@@ -342,6 +342,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Text_BookPurchase;
+        private System.Windows.Forms.TextBox Text_BookPurchaseDate;
     }
 }
