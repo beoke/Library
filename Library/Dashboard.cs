@@ -25,7 +25,13 @@ namespace Library
             AddBook_Tool.Click += AddBook_Tool_Click;
             ViewBook_Tool.Click += ViewBook_Tool_Click;
             AddStudent_Tool.Click += AddStudent_Tool_Click;
+            ViewStudent_Tool.Click += ViewStudent_Tool_Click; ;
+        }
 
+        private void ViewStudent_Tool_Click(object sender, EventArgs e)
+        {
+            Form_ViewStudent student = new Form_ViewStudent();
+            student.Show(); ;
         }
 
         private void AddStudent_Tool_Click(object sender, EventArgs e)
@@ -56,5 +62,6 @@ namespace Library
         }
 
         #endregion
+
     }
 }

@@ -35,7 +35,7 @@
             this.ViewBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddStudent_Tool = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViewStudent_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.issueBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.completeBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +91,7 @@
             this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.studentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddStudent_Tool,
-            this.viewToolStripMenuItem});
+            this.ViewStudent_Tool});
             this.studentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("studentsToolStripMenuItem.Image")));
             this.studentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
@@ -106,13 +106,13 @@
             this.AddStudent_Tool.Size = new System.Drawing.Size(214, 56);
             this.AddStudent_Tool.Text = "Add Student";
             // 
-            // viewToolStripMenuItem
+            // ViewStudent_Tool
             // 
-            this.viewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewToolStripMenuItem.Image")));
-            this.viewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(214, 56);
-            this.viewToolStripMenuItem.Text = "View Student Info";
+            this.ViewStudent_Tool.Image = ((System.Drawing.Image)(resources.GetObject("ViewStudent_Tool.Image")));
+            this.ViewStudent_Tool.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ViewStudent_Tool.Name = "ViewStudent_Tool";
+            this.ViewStudent_Tool.Size = new System.Drawing.Size(214, 56);
+            this.ViewStudent_Tool.Text = "View Student Info";
             // 
             // issueBooksToolStripMenuItem
             // 
@@ -176,7 +176,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddBook_Tool;
         private System.Windows.Forms.ToolStripMenuItem ViewBook_Tool;
         private System.Windows.Forms.ToolStripMenuItem AddStudent_Tool;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ViewStudent_Tool;
         private System.Windows.Forms.ToolStripMenuItem issueBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem completeBookDetailsToolStripMenuItem;
