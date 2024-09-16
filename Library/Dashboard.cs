@@ -24,6 +24,14 @@ namespace Library
             Exit_Tools.Click += Exit_Tools_Click;
             AddBook_Tool.Click += AddBook_Tool_Click;
             ViewBook_Tool.Click += ViewBook_Tool_Click;
+            AddStudent_Tool.Click += AddStudent_Tool_Click;
+
+        }
+
+        private void AddStudent_Tool_Click(object sender, EventArgs e)
+        {
+            Form_AddStudent ads = new Form_AddStudent();
+            ads.Show();
         }
 
         private void ViewBook_Tool_Click(object sender, EventArgs e)

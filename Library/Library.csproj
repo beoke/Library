@@ -123,6 +123,7 @@
   <ItemGroup>
     <Content Include="Script Table\Login.sql" />
     <Content Include="Script Table\NewBook.sql" />
+    <Content Include="Script Table\NewStudent.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

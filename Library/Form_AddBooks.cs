@@ -40,48 +40,48 @@ namespace Library
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
-            // Mengecek apakah semua field telah diisi
-            if (BookName_Text.Text != "" && BookAuthor_Text.Text != "" && BookPublication_Text.Text != "" && BookPurchase_Date.Text != "" && BookPrice_Text.Text != "" && BookQuantity_Text.Text != "")
-            {
-                // Menangkap data dari form
-                string bname = BookName_Text.Text;
-                string bauthor = BookAuthor_Text.Text;
-                string publication = BookPublication_Text.Text;
-                string pdate = BookPurchase_Date.Text;
-                Int64 price = Int64.Parse(BookPrice_Text.Text);
-                Int64 quan = Int64.Parse(BookQuantity_Text.Text);
-
-                // Membuat koneksi ke database
-                using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
+                // Mengecek apakah semua field telah diisi
+                if (BookName_Text.Text != "" && BookAuthor_Text.Text != "" && BookPublication_Text.Text != "" && BookPurchase_Date.Text != "" && BookPrice_Text.Text != "" && BookQuantity_Text.Text != "")
                 {
-                    // Membuka koneksi
-                    conn.Open();
+                    // Menangkap data dari form
+                    string bname = BookName_Text.Text;
+                    string bauthor = BookAuthor_Text.Text;
+                    string publication = BookPublication_Text.Text;
+                    string pdate = BookPurchase_Date.Text;
+                    Int64 price = Int64.Parse(BookPrice_Text.Text);
+                    Int64 quan = Int64.Parse(BookQuantity_Text.Text);
 
-                    // Membuat perintah SQL dengan parameter
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO NewBook (bName, bAuthor, bPublic, bPDate, bPrice, bQuan) VALUES (@bname, @bauthor, @bpublic, @bpdate, @bprice, @bquan)", conn))
+                    // Membuat koneksi ke database
+                    using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
                     {
-                        // Menambahkan nilai parameter
-                        cmd.Parameters.AddWithValue("@bname", bname);
-                        cmd.Parameters.AddWithValue("@bauthor", bauthor);
-                        cmd.Parameters.AddWithValue("@bpublic", publication);
-                        cmd.Parameters.AddWithValue("@bpdate", pdate);
-                        cmd.Parameters.AddWithValue("@bprice", price);
-                        cmd.Parameters.AddWithValue("@bquan", quan);
+                        // Membuka koneksi
+                        conn.Open();
 
-                        // Menjalankan perintah
-                        cmd.ExecuteNonQuery();
+                        // Membuat perintah SQL dengan parameter
+                        using (SqlCommand cmd = new SqlCommand("INSERT INTO NewBook (bName, bAuthor, bPublic, bPDate, bPrice, bQuan) VALUES (@bname, @bauthor, @bpublic, @bpdate, @bprice, @bquan)", conn))
+                        {
+                            // Menambahkan nilai parameter
+                            cmd.Parameters.AddWithValue("@bname", bname);
+                            cmd.Parameters.AddWithValue("@bauthor", bauthor);
+                            cmd.Parameters.AddWithValue("@bpublic", publication);
+                            cmd.Parameters.AddWithValue("@bpdate", pdate);
+                            cmd.Parameters.AddWithValue("@bprice", price);
+                            cmd.Parameters.AddWithValue("@bquan", quan);
+
+                            // Menjalankan perintah
+                            cmd.ExecuteNonQuery();
+                        }
                     }
-                }
 
-                // Menampilkan pesan sukses
-                MessageBox.Show("Data Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearData();
-            }
-            else
-            {
-                // Menampilkan pesan error
-                MessageBox.Show("Empety Field NOT Allowed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                    // Menampilkan pesan sukses
+                    MessageBox.Show("Data Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearData();
+                }
+                else
+                {
+                    // Menampilkan pesan error
+                    MessageBox.Show("Empety Field NOT Allowed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
         }
 
         private void ClearData()
