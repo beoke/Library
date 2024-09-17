@@ -15,6 +15,28 @@ namespace Library
         public Form_ViewStudent()
         {
             InitializeComponent();
+
+            OrganizeEvent();
+        }
+        private void OrganizeEvent()
+        {
+            NIS_Text.TextChanged += NIS_Text_TextChanged;
+        }
+
+        private void NIS_Text_TextChanged(object sender, EventArgs e)
+        {
+            if (NIS_Text.Text != "")
+            {
+                label1.Visible = false;
+                Image image = Image.FromFile("D:/Simpanan/Liberay Management System/search1.gif");
+                pictureBox1.Image = image;
+            }
+            else
+            {
+                label1.Visible = true;
+                Image image = Image.FromFile("D:/Simpanan/Liberay Management System/search.gif");
+                pictureBox1.Image = image;
+            }
         }
     }
 }

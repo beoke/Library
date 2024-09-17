@@ -36,7 +36,7 @@
             this.Text_BookQuantity = new System.Windows.Forms.TextBox();
             this.Text_BookPrice = new System.Windows.Forms.TextBox();
             this.Text_Departement = new System.Windows.Forms.TextBox();
-            this.Text_Enrollment = new System.Windows.Forms.TextBox();
+            this.Text_NIS = new System.Windows.Forms.TextBox();
             this.Text_StudentName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,12 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Grid_ViewStudent = new System.Windows.Forms.DataGridView();
             this.Refresh_Button = new System.Windows.Forms.Button();
-            this.Enrollment_Text = new System.Windows.Forms.TextBox();
+            this.NIS_Text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelData = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_ViewStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelData.SuspendLayout();
@@ -122,13 +123,13 @@
             this.Text_Departement.Size = new System.Drawing.Size(219, 22);
             this.Text_Departement.TabIndex = 8;
             // 
-            // Text_Enrollment
+            // Text_NIS
             // 
-            this.Text_Enrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_Enrollment.Location = new System.Drawing.Point(182, 98);
-            this.Text_Enrollment.Name = "Text_Enrollment";
-            this.Text_Enrollment.Size = new System.Drawing.Size(219, 22);
-            this.Text_Enrollment.TabIndex = 7;
+            this.Text_NIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_NIS.Location = new System.Drawing.Point(182, 98);
+            this.Text_NIS.Name = "Text_NIS";
+            this.Text_NIS.Size = new System.Drawing.Size(219, 22);
+            this.Text_NIS.TabIndex = 7;
             // 
             // Text_StudentName
             // 
@@ -182,11 +183,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 95);
+            this.label4.Location = new System.Drawing.Point(21, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 20);
+            this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Enrollment No";
+            this.label4.Text = "NIS";
             // 
             // label3
             // 
@@ -217,22 +218,22 @@
             this.Refresh_Button.Text = "Refresh";
             this.Refresh_Button.UseVisualStyleBackColor = true;
             // 
-            // Enrollment_Text
+            // NIS_Text
             // 
-            this.Enrollment_Text.Location = new System.Drawing.Point(384, 146);
-            this.Enrollment_Text.Name = "Enrollment_Text";
-            this.Enrollment_Text.Size = new System.Drawing.Size(201, 20);
-            this.Enrollment_Text.TabIndex = 8;
+            this.NIS_Text.Location = new System.Drawing.Point(384, 146);
+            this.NIS_Text.Name = "NIS_Text";
+            this.NIS_Text.Size = new System.Drawing.Size(201, 20);
+            this.NIS_Text.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(221, 143);
+            this.label2.Location = new System.Drawing.Point(321, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 24);
+            this.label2.Size = new System.Drawing.Size(43, 24);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Enrollment No";
+            this.label2.Text = "NIS";
             // 
             // label1
             // 
@@ -241,9 +242,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(185, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.Size = new System.Drawing.Size(68, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "View Student";
+            this.label1.Text = "View ";
             // 
             // pictureBox1
             // 
@@ -266,7 +267,7 @@
             this.PanelData.Controls.Add(this.Text_BookQuantity);
             this.PanelData.Controls.Add(this.Text_BookPrice);
             this.PanelData.Controls.Add(this.Text_Departement);
-            this.PanelData.Controls.Add(this.Text_Enrollment);
+            this.PanelData.Controls.Add(this.Text_NIS);
             this.PanelData.Controls.Add(this.Text_StudentName);
             this.PanelData.Controls.Add(this.label8);
             this.PanelData.Controls.Add(this.label7);
@@ -282,12 +283,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(5, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(961, 134);
             this.panel1.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label10.Location = new System.Drawing.Point(185, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 29);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Student";
             // 
             // Form_ViewStudent
             // 
@@ -298,7 +311,7 @@
             this.ClientSize = new System.Drawing.Size(975, 504);
             this.Controls.Add(this.Grid_ViewStudent);
             this.Controls.Add(this.Refresh_Button);
-            this.Controls.Add(this.Enrollment_Text);
+            this.Controls.Add(this.NIS_Text);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PanelData);
             this.Controls.Add(this.panel1);
@@ -325,7 +338,7 @@
         private System.Windows.Forms.TextBox Text_BookQuantity;
         private System.Windows.Forms.TextBox Text_BookPrice;
         private System.Windows.Forms.TextBox Text_Departement;
-        private System.Windows.Forms.TextBox Text_Enrollment;
+        private System.Windows.Forms.TextBox Text_NIS;
         private System.Windows.Forms.TextBox Text_StudentName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -335,11 +348,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView Grid_ViewStudent;
         private System.Windows.Forms.Button Refresh_Button;
-        private System.Windows.Forms.TextBox Enrollment_Text;
+        private System.Windows.Forms.TextBox NIS_Text;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel PanelData;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label10;
     }
 }
