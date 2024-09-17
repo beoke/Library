@@ -105,6 +105,8 @@ namespace Library
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
+
+                    Form_ViewBook_Load(this, null);
                 }
                 CustomGrid();
                 RefreshData();

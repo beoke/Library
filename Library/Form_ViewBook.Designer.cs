@@ -124,6 +124,7 @@
             this.Grid_viewBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid_viewBook.Location = new System.Drawing.Point(12, 172);
             this.Grid_viewBook.Name = "Grid_viewBook";
+            this.Grid_viewBook.ReadOnly = true;
             this.Grid_viewBook.Size = new System.Drawing.Size(954, 306);
             this.Grid_viewBook.TabIndex = 4;
             // 

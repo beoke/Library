@@ -66,7 +66,7 @@ namespace Library
                     conn.Open();
 
                     // Membuat perintah SQL dengan parameter
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO NewStudent (StuName, StuEnrol, StuDep, StuSem, StuContact, StuEmail) VALUES (@stuname, @stuenrol, @studep, @stusem, @stucontact, @stuemail)", conn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Student (StuName, StuEnrol, StuDep, StuSem, StuContact, StuEmail) VALUES (@stuname, @stuenrol, @studep, @stusem, @stucontact, @stuemail)", conn))
                     {
                         // Menambahkan nilai parameter
                         cmd.Parameters.AddWithValue("@stuname", name);
