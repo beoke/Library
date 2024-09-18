@@ -67,6 +67,12 @@
     <Compile Include="Form_AddStudent.Designer.cs">
       <DependentUpon>Form_AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_IssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_IssueBook.Designer.cs">
+      <DependentUpon>Form_IssueBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ViewBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AddStudent.resx">
       <DependentUpon>Form_AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_IssueBook.resx">
+      <DependentUpon>Form_IssueBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ViewBook.resx">
       <DependentUpon>Form_ViewBook.cs</DependentUpon>

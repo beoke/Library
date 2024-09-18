@@ -25,7 +25,15 @@ namespace Library
             AddBook_Tool.Click += AddBook_Tool_Click;
             ViewBook_Tool.Click += ViewBook_Tool_Click;
             AddStudent_Tool.Click += AddStudent_Tool_Click;
-            ViewStudent_Tool.Click += ViewStudent_Tool_Click; ;
+            ViewStudent_Tool.Click += ViewStudent_Tool_Click;
+            IssueBook_Tool.Click += IssueBook_Tool_Click;
+
+        }
+
+        private void IssueBook_Tool_Click(object sender, EventArgs e)
+        {
+            Form_IssueBook isb = new Form_IssueBook();
+            isb.Show();
         }
 
         private void ViewStudent_Tool_Click(object sender, EventArgs e)
