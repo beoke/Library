@@ -36,11 +36,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Text_Search = new System.Windows.Forms.TextBox();
+            this.Button_Search = new System.Windows.Forms.Button();
+            this.Button_Refresh = new System.Windows.Forms.Button();
+            this.Button_Exit = new System.Windows.Forms.Button();
+            this.Button_Issue = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,14 +48,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Text_StudentName = new System.Windows.Forms.TextBox();
+            this.Text_Departement = new System.Windows.Forms.TextBox();
+            this.Text_StudentSemester = new System.Windows.Forms.TextBox();
+            this.Text_StudentContact = new System.Windows.Forms.TextBox();
+            this.Text_StudentEmail = new System.Windows.Forms.TextBox();
+            this.Date_BookIssue = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
+            this.Combo_BookName = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,10 +88,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(310, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(112, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Issue Book";
             // 
@@ -100,10 +101,10 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Button_Exit);
+            this.panel2.Controls.Add(this.Button_Refresh);
+            this.panel2.Controls.Add(this.Button_Search);
+            this.panel2.Controls.Add(this.Text_Search);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(13, 119);
@@ -117,14 +118,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.Combo_BookName);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.Date_BookIssue);
+            this.panel3.Controls.Add(this.Text_StudentEmail);
+            this.panel3.Controls.Add(this.Text_StudentContact);
+            this.panel3.Controls.Add(this.Text_StudentSemester);
+            this.panel3.Controls.Add(this.Text_Departement);
+            this.panel3.Controls.Add(this.Text_StudentName);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -132,7 +133,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.Button_Issue);
             this.panel3.Location = new System.Drawing.Point(276, 118);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(419, 381);
@@ -159,62 +160,62 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Enter Enrollment No";
             // 
-            // textBox1
+            // Text_Search
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(33, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 26);
-            this.textBox1.TabIndex = 2;
+            this.Text_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_Search.Location = new System.Drawing.Point(33, 160);
+            this.Text_Search.Name = "Text_Search";
+            this.Text_Search.Size = new System.Drawing.Size(179, 26);
+            this.Text_Search.TabIndex = 2;
             // 
-            // button1
+            // Button_Search
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(44, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Search Student";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Search.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Search.Location = new System.Drawing.Point(53, 208);
+            this.Button_Search.Name = "Button_Search";
+            this.Button_Search.Size = new System.Drawing.Size(139, 34);
+            this.Button_Search.TabIndex = 3;
+            this.Button_Search.Text = "Search Student";
+            this.Button_Search.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Button_Refresh
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(33, 321);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Refresh.Location = new System.Drawing.Point(33, 321);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.Button_Refresh.TabIndex = 4;
+            this.Button_Refresh.Text = "Refresh";
+            this.Button_Refresh.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Button_Exit
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(127, 321);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Button_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Exit.Location = new System.Drawing.Point(127, 321);
+            this.Button_Exit.Name = "Button_Exit";
+            this.Button_Exit.Size = new System.Drawing.Size(75, 23);
+            this.Button_Exit.TabIndex = 5;
+            this.Button_Exit.Text = "Exit";
+            this.Button_Exit.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Button_Issue
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(293, 332);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Issue Book";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Button_Issue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Issue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Issue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Issue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Issue.Location = new System.Drawing.Point(293, 332);
+            this.Button_Issue.Name = "Button_Issue";
+            this.Button_Issue.Size = new System.Drawing.Size(110, 23);
+            this.Button_Issue.TabIndex = 6;
+            this.Button_Issue.Text = "Issue Book";
+            this.Button_Issue.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -293,82 +294,71 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Book Issue Date";
             // 
-            // textBox2
+            // Text_StudentName
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Text_StudentName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
-            this.textBox2.TabIndex = 14;
+            this.Text_StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_StudentName.Location = new System.Drawing.Point(203, 23);
+            this.Text_StudentName.Name = "Text_StudentName";
+            this.Text_StudentName.Size = new System.Drawing.Size(200, 22);
+            this.Text_StudentName.TabIndex = 14;
             // 
-            // textBox3
+            // Text_Departement
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Text_Departement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(203, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 22);
-            this.textBox3.TabIndex = 15;
+            this.Text_Departement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_Departement.Location = new System.Drawing.Point(203, 64);
+            this.Text_Departement.Name = "Text_Departement";
+            this.Text_Departement.Size = new System.Drawing.Size(200, 22);
+            this.Text_Departement.TabIndex = 15;
             // 
-            // textBox4
+            // Text_StudentSemester
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Text_StudentSemester.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(203, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 22);
-            this.textBox4.TabIndex = 16;
+            this.Text_StudentSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_StudentSemester.Location = new System.Drawing.Point(203, 102);
+            this.Text_StudentSemester.Name = "Text_StudentSemester";
+            this.Text_StudentSemester.Size = new System.Drawing.Size(200, 22);
+            this.Text_StudentSemester.TabIndex = 16;
             // 
-            // textBox5
+            // Text_StudentContact
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Text_StudentContact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(203, 145);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 22);
-            this.textBox5.TabIndex = 17;
+            this.Text_StudentContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_StudentContact.Location = new System.Drawing.Point(203, 145);
+            this.Text_StudentContact.Name = "Text_StudentContact";
+            this.Text_StudentContact.Size = new System.Drawing.Size(200, 22);
+            this.Text_StudentContact.TabIndex = 17;
             // 
-            // textBox6
+            // Text_StudentEmail
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Text_StudentEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(203, 190);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 22);
-            this.textBox6.TabIndex = 18;
+            this.Text_StudentEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_StudentEmail.Location = new System.Drawing.Point(203, 190);
+            this.Text_StudentEmail.Name = "Text_StudentEmail";
+            this.Text_StudentEmail.Size = new System.Drawing.Size(200, 22);
+            this.Text_StudentEmail.TabIndex = 18;
             // 
-            // textBox7
+            // Date_BookIssue
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Date_BookIssue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(203, 234);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 22);
-            this.textBox7.TabIndex = 19;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(203, 278);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 20;
+            this.Date_BookIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_BookIssue.Location = new System.Drawing.Point(203, 278);
+            this.Date_BookIssue.Name = "Date_BookIssue";
+            this.Date_BookIssue.Size = new System.Drawing.Size(200, 22);
+            this.Date_BookIssue.TabIndex = 20;
             // 
             // label10
             // 
@@ -380,6 +370,14 @@
             this.label10.Size = new System.Drawing.Size(214, 16);
             this.label10.TabIndex = 21;
             this.label10.Text = "one student maximum 3 books";
+            // 
+            // Combo_BookName
+            // 
+            this.Combo_BookName.FormattingEnabled = true;
+            this.Combo_BookName.Location = new System.Drawing.Point(203, 236);
+            this.Combo_BookName.Name = "Combo_BookName";
+            this.Combo_BookName.Size = new System.Drawing.Size(200, 21);
+            this.Combo_BookName.TabIndex = 22;
             // 
             // Form_IssueBook
             // 
@@ -413,20 +411,19 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Button_Exit;
+        private System.Windows.Forms.Button Button_Refresh;
+        private System.Windows.Forms.Button Button_Search;
+        private System.Windows.Forms.TextBox Text_Search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Button_Issue;
+        private System.Windows.Forms.DateTimePicker Date_BookIssue;
+        private System.Windows.Forms.TextBox Text_StudentEmail;
+        private System.Windows.Forms.TextBox Text_StudentContact;
+        private System.Windows.Forms.TextBox Text_StudentSemester;
+        private System.Windows.Forms.TextBox Text_Departement;
+        private System.Windows.Forms.TextBox Text_StudentName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -435,5 +432,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox Combo_BookName;
     }
 }
