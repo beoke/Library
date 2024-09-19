@@ -50,7 +50,7 @@ namespace Library
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from PinjamBuku where std_enroll = '"+Text_Search.Text+"' and book_return_date IS NULL";
+                cmd.CommandText = "select * from IRBook where std_enroll = '"+Text_Search.Text+"' and book_return_date IS NULL";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);

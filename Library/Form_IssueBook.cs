@@ -67,7 +67,7 @@ namespace Library
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = conn;
 
-                        cmd.CommandText = "INSERT INTO PinjamBuku (std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) " +
+                        cmd.CommandText = "INSERT INTO IRBook (std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) " +
                                           "VALUES (@enroll, @sname, @sdep, @sem, @contact, @email, @bookname, @bookissuedate)";
 
                         cmd.Parameters.AddWithValue("@enroll", enroll);
@@ -115,7 +115,7 @@ namespace Library
 
                     //--------------------------------------------------------------------------------------------------------------
                     // code to count how many book has been issued on this enrollment number
-                    cmd.CommandText = "select count(std_enroll) from PinjamBuku where std_enroll = '" + SearchId + "'and book_return_date is null";
+                    cmd.CommandText = "select count(std_enroll) from IRBook where std_enroll = '" + SearchId + "'and book_return_date is null";
                     SqlDataAdapter da1 = new SqlDataAdapter(cmd);
                     DataSet ds1 = new DataSet();
                     da.Fill(ds1);
