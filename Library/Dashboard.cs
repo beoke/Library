@@ -27,7 +27,14 @@ namespace Library
             AddStudent_Tool.Click += AddStudent_Tool_Click;
             ViewStudent_Tool.Click += ViewStudent_Tool_Click;
             IssueBook_Tool.Click += IssueBook_Tool_Click;
+            ReturnBook_Tool.Click += ReturnBook_Tool_Click;
 
+        }
+
+        private void ReturnBook_Tool_Click(object sender, EventArgs e)
+        {
+            Form_ReturnBook Rbook = new Form_ReturnBook();
+            Rbook.Show();
         }
 
         private void IssueBook_Tool_Click(object sender, EventArgs e)

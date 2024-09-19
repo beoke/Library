@@ -29,64 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ReturnBook));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Grid_IssueBook = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Text_Search = new System.Windows.Forms.TextBox();
+            this.Button_search = new System.Windows.Forms.Button();
+            this.Button_Refresh = new System.Windows.Forms.Button();
+            this.Button_Exit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Text_BookName = new System.Windows.Forms.TextBox();
+            this.Text_IssueDate = new System.Windows.Forms.TextBox();
+            this.Button_Return = new System.Windows.Forms.Button();
+            this.Button_Cancel = new System.Windows.Forms.Button();
+            this.Date_ReturnDate = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_IssueBook)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Grid_IssueBook
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(253, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 310);
-            this.dataGridView1.TabIndex = 0;
+            this.Grid_IssueBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_IssueBook.Location = new System.Drawing.Point(253, 12);
+            this.Grid_IssueBook.Name = "Grid_IssueBook";
+            this.Grid_IssueBook.Size = new System.Drawing.Size(702, 312);
+            this.Grid_IssueBook.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.Date_ReturnDate);
+            this.panel1.Controls.Add(this.Button_Cancel);
+            this.panel1.Controls.Add(this.Button_Return);
+            this.panel1.Controls.Add(this.Text_IssueDate);
+            this.panel1.Controls.Add(this.Text_BookName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(253, 332);
+            this.panel1.Location = new System.Drawing.Point(253, 341);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 124);
+            this.panel1.Size = new System.Drawing.Size(702, 129);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Button_Exit);
+            this.panel2.Controls.Add(this.Button_Refresh);
+            this.panel2.Controls.Add(this.Button_search);
+            this.panel2.Controls.Add(this.Text_Search);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 444);
+            this.panel2.Size = new System.Drawing.Size(235, 312);
             this.panel2.TabIndex = 2;
             // 
             // pictureBox1
@@ -102,49 +103,52 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 121);
+            this.label1.Location = new System.Drawing.Point(51, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Enrollment";
             // 
-            // textBox1
+            // Text_Search
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(55, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 24);
-            this.textBox1.TabIndex = 2;
+            this.Text_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_Search.Location = new System.Drawing.Point(41, 173);
+            this.Text_Search.Name = "Text_Search";
+            this.Text_Search.Size = new System.Drawing.Size(165, 24);
+            this.Text_Search.TabIndex = 2;
             // 
-            // button1
+            // Button_search
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(69, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Search ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_search.Location = new System.Drawing.Point(71, 203);
+            this.Button_search.Name = "Button_search";
+            this.Button_search.Size = new System.Drawing.Size(98, 32);
+            this.Button_search.TabIndex = 3;
+            this.Button_search.Text = "Search ";
+            this.Button_search.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Button_Refresh
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(21, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Refresh.Location = new System.Drawing.Point(27, 269);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(75, 27);
+            this.Button_Refresh.TabIndex = 4;
+            this.Button_Refresh.Text = "Refresh";
+            this.Button_Refresh.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Button_Exit
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(149, 255);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 38);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Button_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Exit.Location = new System.Drawing.Point(139, 269);
+            this.Button_Exit.Name = "Button_Exit";
+            this.Button_Exit.Size = new System.Drawing.Size(67, 27);
+            this.Button_Exit.TabIndex = 5;
+            this.Button_Exit.Text = "Exit";
+            this.Button_Exit.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -176,49 +180,51 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Book Return Date";
             // 
-            // textBox2
+            // Text_BookName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(180, 7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 24);
-            this.textBox2.TabIndex = 3;
+            this.Text_BookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_BookName.Location = new System.Drawing.Point(180, 15);
+            this.Text_BookName.Name = "Text_BookName";
+            this.Text_BookName.Size = new System.Drawing.Size(200, 24);
+            this.Text_BookName.TabIndex = 3;
             // 
-            // textBox3
+            // Text_IssueDate
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(180, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 24);
-            this.textBox3.TabIndex = 4;
+            this.Text_IssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_IssueDate.Location = new System.Drawing.Point(180, 53);
+            this.Text_IssueDate.Name = "Text_IssueDate";
+            this.Text_IssueDate.Size = new System.Drawing.Size(200, 24);
+            this.Text_IssueDate.TabIndex = 4;
             // 
-            // button4
+            // Button_Return
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(463, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 35);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Return";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Button_Return.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Return.Location = new System.Drawing.Point(463, 15);
+            this.Button_Return.Name = "Button_Return";
+            this.Button_Return.Size = new System.Drawing.Size(75, 35);
+            this.Button_Return.TabIndex = 6;
+            this.Button_Return.Text = "Return";
+            this.Button_Return.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Button_Cancel
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(463, 48);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 29);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Cancel";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Cancel.Location = new System.Drawing.Point(463, 56);
+            this.Button_Cancel.Name = "Button_Cancel";
+            this.Button_Cancel.Size = new System.Drawing.Size(75, 29);
+            this.Button_Cancel.TabIndex = 7;
+            this.Button_Cancel.Text = "Cancel";
+            this.Button_Cancel.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // Date_ReturnDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 88);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
-            this.dateTimePicker1.TabIndex = 8;
+            this.Date_ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ReturnDate.Location = new System.Drawing.Point(180, 88);
+            this.Date_ReturnDate.Name = "Date_ReturnDate";
+            this.Date_ReturnDate.Size = new System.Drawing.Size(200, 24);
+            this.Date_ReturnDate.TabIndex = 8;
             // 
             // Form_ReturnBook
             // 
@@ -226,13 +232,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1008, 444);
+            this.ClientSize = new System.Drawing.Size(982, 335);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Grid_IssueBook);
             this.Name = "Form_ReturnBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_ReturnBook";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form_ReturnBook_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_IssueBook)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -244,22 +252,22 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Grid_IssueBook;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Button_Cancel;
+        private System.Windows.Forms.Button Button_Return;
+        private System.Windows.Forms.TextBox Text_IssueDate;
+        private System.Windows.Forms.TextBox Text_BookName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Button_Exit;
+        private System.Windows.Forms.Button Button_Refresh;
+        private System.Windows.Forms.Button Button_search;
+        private System.Windows.Forms.TextBox Text_Search;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Date_ReturnDate;
     }
 }

@@ -37,7 +37,7 @@
             this.AddStudent_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewStudent_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.IssueBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReturnBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.completeBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit_Tools = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -50,7 +50,7 @@
             this.booksToolStripMenuItem,
             this.studentsToolStripMenuItem,
             this.IssueBook_Tool,
-            this.returnBooksToolStripMenuItem,
+            this.ReturnBook_Tool,
             this.completeBookDetailsToolStripMenuItem,
             this.Exit_Tools});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -122,14 +122,14 @@
             this.IssueBook_Tool.Size = new System.Drawing.Size(130, 54);
             this.IssueBook_Tool.Text = "Issue Books";
             // 
-            // returnBooksToolStripMenuItem
+            // ReturnBook_Tool
             // 
-            this.returnBooksToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.returnBooksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("returnBooksToolStripMenuItem.Image")));
-            this.returnBooksToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
-            this.returnBooksToolStripMenuItem.Size = new System.Drawing.Size(139, 54);
-            this.returnBooksToolStripMenuItem.Text = "Return Books";
+            this.ReturnBook_Tool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ReturnBook_Tool.Image = ((System.Drawing.Image)(resources.GetObject("ReturnBook_Tool.Image")));
+            this.ReturnBook_Tool.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReturnBook_Tool.Name = "ReturnBook_Tool";
+            this.ReturnBook_Tool.Size = new System.Drawing.Size(139, 54);
+            this.ReturnBook_Tool.Text = "Return Books";
             // 
             // completeBookDetailsToolStripMenuItem
             // 
@@ -178,7 +178,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddStudent_Tool;
         private System.Windows.Forms.ToolStripMenuItem ViewStudent_Tool;
         private System.Windows.Forms.ToolStripMenuItem IssueBook_Tool;
-        private System.Windows.Forms.ToolStripMenuItem returnBooksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReturnBook_Tool;
         private System.Windows.Forms.ToolStripMenuItem completeBookDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Exit_Tools;
     }
