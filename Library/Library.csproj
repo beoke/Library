@@ -73,6 +73,12 @@
     <Compile Include="Form_IssueBook.Designer.cs">
       <DependentUpon>Form_IssueBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ReturnBook.Designer.cs">
+      <DependentUpon>Form_ReturnBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ViewBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_IssueBook.resx">
       <DependentUpon>Form_IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ReturnBook.resx">
+      <DependentUpon>Form_ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ViewBook.resx">
       <DependentUpon>Form_ViewBook.cs</DependentUpon>

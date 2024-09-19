@@ -28,6 +28,12 @@ namespace Library
             Button_Search.Click += Button_Search_Click;
             Button_Issue.Click += Button_Issue_Click;
             Button_Refresh.Click += Button_Refresh_Click;
+            Button_Exit.Click += Button_Exit_Click;
+        }
+
+        private void Button_Exit_Click(object sender, EventArgs e)
+        {
+           this.Close();
         }
 
         private void Button_Refresh_Click(object sender, EventArgs e)
