@@ -24,11 +24,13 @@ namespace Library
         }
         private void OrganizeEvent()
         {
+            
             Text_Search.TextChanged += Text_Search_TextChanged;
             Button_Search.Click += Button_Search_Click;
             Button_Issue.Click += Button_Issue_Click;
             Button_Refresh.Click += Button_Refresh_Click;
             Button_Exit.Click += Button_Exit_Click;
+            
         }
 
         private void Button_Exit_Click(object sender, EventArgs e)
@@ -67,7 +69,7 @@ namespace Library
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = conn;
 
-                        cmd.CommandText = "INSERT INTO IRBook (std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) " +
+                        cmd.CommandText = "INSERT INTO IRBookk (std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) " +
                                           "VALUES (@enroll, @sname, @sdep, @sem, @contact, @email, @bookname, @bookissuedate)";
 
                         cmd.Parameters.AddWithValue("@enroll", enroll);
@@ -115,7 +117,7 @@ namespace Library
 
                     //--------------------------------------------------------------------------------------------------------------
                     // code to count how many book has been issued on this enrollment number
-                    cmd.CommandText = "select count(std_enroll) from IRBook where std_enroll = '" + SearchId + "'and book_return_date is null";
+                    cmd.CommandText = "select count(std_enroll) from IRBookk where std_enroll = '" + SearchId + "'and book_return_date is null";
                     SqlDataAdapter da1 = new SqlDataAdapter(cmd);
                     DataSet ds1 = new DataSet();
                     da.Fill(ds1);

@@ -25,8 +25,53 @@ namespace Library
         Int64 rowid;
         public void OrganizeEvent()
         {
+            Button_Return.Click += Button_Return_Click;
             Button_search.Click += Button_search_Click;
             Grid_IssueBook.CellClick += Grid_IssueBook_CellClick;
+        }
+
+        private void Button_Return_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    // Convert the date from the DateTimePicker to a format recognized by SQL Server
+                    DateTime returnDate;
+                    if (!DateTime.TryParse(Date_ReturnDate.Text, out returnDate))
+                    {
+                        MessageBox.Show("Invalid date format. Please use a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    cmd.CommandText = "UPDATE IRBookk SET book_return_date = @returndate WHERE std_enroll = @enroll AND id = @rowid";
+
+                    // Use parameterized queries to prevent SQL injection
+                    cmd.Parameters.AddWithValue("@returndate", returnDate);
+                    cmd.Parameters.AddWithValue("@enroll", Text_Search.Text);
+                    cmd.Parameters.AddWithValue("@rowid", rowid);
+
+                    conn.Open();
+                    int rowsUpdated = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    if (rowsUpdated > 0)
+                    {
+                        MessageBox.Show("Book return date updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Form_ReturnBook_Load(this, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid ID or no such book issued.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    // kurang update datanya di grid
+
+                }
+            }
+
+
         }
 
         private void Grid_IssueBook_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -47,21 +92,28 @@ namespace Library
         {
             using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-
-                cmd.CommandText = "select * from IRBook where std_enroll = '"+Text_Search.Text+"' and book_return_date IS NULL";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-               if(ds.Tables[0].Rows.Count != 0)
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    Grid_IssueBook.DataSource = ds.Tables[0];
-                }
-                else
-                {
-                    MessageBox.Show("invalid ID or No Book Issued","Eror",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    cmd.Connection = conn;
+
+                    // Use parameterized queries to prevent SQL injection
+                    cmd.CommandText = "SELECT * FROM IRBookk WHERE std_enroll = @enroll AND book_return_date IS NULL";
+                    cmd.Parameters.AddWithValue("@enroll", Text_Search.Text);
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+
+                        if (ds.Tables[0].Rows.Count != 0)
+                        {
+                            Grid_IssueBook.DataSource = ds.Tables[0];
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid ID or No Book Issued", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
         }
