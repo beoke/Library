@@ -25,9 +25,37 @@ namespace Library
         Int64 rowid;
         public void OrganizeEvent()
         {
+            Button_Exit.Click += Button_Exit_Click;
+            Button_Cancel.Click += Button_Cancel_Click;
+            Button_Refresh.Click += Button_Refresh_Click;
             Button_Return.Click += Button_Return_Click;
             Button_search.Click += Button_search_Click;
             Grid_IssueBook.CellClick += Grid_IssueBook_CellClick;
+            Text_Search.TextChanged += Text_Search_TextChanged;
+        }
+
+        private void Button_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Cancel_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            Text_Search.Clear();
+        }
+
+        private void Text_Search_TextChanged(object sender, EventArgs e)
+        {
+            if (Text_Search.Text == "")
+            {
+                panel1.Visible = false;
+                Grid_IssueBook.DataSource = null;
+            }
         }
 
         private void Button_Return_Click(object sender, EventArgs e)
