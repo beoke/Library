@@ -33,6 +33,10 @@ namespace Library
             Grid_IssueBook.CellClick += Grid_IssueBook_CellClick;
             Text_Search.TextChanged += Text_Search_TextChanged;
         }
+        private void CustomGrid()                                                                       // custom grid ada di sini
+        {
+            Grid_IssueBook.Columns[0].HeaderText = "ID Buku";
+        }
 
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -136,6 +140,7 @@ namespace Library
                         if (ds.Tables[0].Rows.Count != 0)
                         {
                             Grid_IssueBook.DataSource = ds.Tables[0];
+                            CustomGrid();
                         }
                         else
                         {
