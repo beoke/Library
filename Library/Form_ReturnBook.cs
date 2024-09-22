@@ -35,7 +35,25 @@ namespace Library
         }
         private void CustomGrid()                                                                       // custom grid ada di sini
         {
-            Grid_IssueBook.Columns[0].HeaderText = "ID Buku";
+            Grid_IssueBook.Columns[0].HeaderText = "ID";
+            Grid_IssueBook.Columns[1].HeaderText = "NIS Siswa";
+            Grid_IssueBook.Columns[2].HeaderText = "Nama Siswa";
+            Grid_IssueBook.Columns[3].HeaderText = "Sekolah";
+            Grid_IssueBook.Columns[4].HeaderText = "Semester";
+            Grid_IssueBook.Columns[5].HeaderText = "Kontak Siswa";
+            Grid_IssueBook.Columns[6].HeaderText = "Email Siswa";
+            Grid_IssueBook.Columns[7].HeaderText = "Nama Buku";
+            Grid_IssueBook.Columns[8].HeaderText = "Tanggal Peminjaman";
+            Grid_IssueBook.Columns[9].HeaderText = "Tanggal Pengembalian";
+
+
+            Grid_IssueBook.Columns[0].Width = 50;
+            Grid_IssueBook.Columns[2].Width = 150;
+            Grid_IssueBook.Columns[4].Width = 70;
+            Grid_IssueBook.Columns[8].Width = 100;
+            Grid_IssueBook.Columns[9].Width = 100;
+
+            Grid_IssueBook.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void Button_Exit_Click(object sender, EventArgs e)
