@@ -38,7 +38,7 @@
             this.ViewStudent_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.IssueBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.ReturnBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
-            this.completeBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CompleteBook_Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit_Tools = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.studentsToolStripMenuItem,
             this.IssueBook_Tool,
             this.ReturnBook_Tool,
-            this.completeBookDetailsToolStripMenuItem,
+            this.CompleteBook_Tool,
             this.Exit_Tools});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -131,13 +131,13 @@
             this.ReturnBook_Tool.Size = new System.Drawing.Size(139, 54);
             this.ReturnBook_Tool.Text = "Return Books";
             // 
-            // completeBookDetailsToolStripMenuItem
+            // CompleteBook_Tool
             // 
-            this.completeBookDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("completeBookDetailsToolStripMenuItem.Image")));
-            this.completeBookDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
-            this.completeBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(189, 54);
-            this.completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
+            this.CompleteBook_Tool.Image = ((System.Drawing.Image)(resources.GetObject("CompleteBook_Tool.Image")));
+            this.CompleteBook_Tool.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CompleteBook_Tool.Name = "CompleteBook_Tool";
+            this.CompleteBook_Tool.Size = new System.Drawing.Size(189, 54);
+            this.CompleteBook_Tool.Text = "Complete Book Details";
             // 
             // Exit_Tools
             // 
@@ -179,7 +179,7 @@
         private System.Windows.Forms.ToolStripMenuItem ViewStudent_Tool;
         private System.Windows.Forms.ToolStripMenuItem IssueBook_Tool;
         private System.Windows.Forms.ToolStripMenuItem ReturnBook_Tool;
-        private System.Windows.Forms.ToolStripMenuItem completeBookDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CompleteBook_Tool;
         private System.Windows.Forms.ToolStripMenuItem Exit_Tools;
     }
 }
