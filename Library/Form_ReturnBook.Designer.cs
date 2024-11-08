@@ -197,7 +197,7 @@
             this.Button_search.Name = "Button_search";
             this.Button_search.Size = new System.Drawing.Size(98, 32);
             this.Button_search.TabIndex = 3;
-            this.Button_search.Text = "Search ";
+            this.Button_search.Text = "Cari";
             this.Button_search.UseVisualStyleBackColor = true;
             // 
             // Text_Search
@@ -214,9 +214,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(51, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
+            this.label1.Size = new System.Drawing.Size(125, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter Enrollment";
+            this.label1.Text = "Masukkan NIS";
             // 
             // pictureBox1
             // 

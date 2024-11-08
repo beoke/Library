@@ -105,19 +105,6 @@ namespace Library
                 Grid_ViewStudent.DataSource = ds.Tables[0];
                 CustomGrid();
             }
-
-            if (Enrollment_Text.Text != "")
-            {
-                label1.Visible = false;
-                Image image = Image.FromFile("D:/Simpanan/Liberay Management System/search1.gif");
-                pictureBox1.Image = image;
-            }
-            else
-            {
-                label1.Visible = true;
-                Image image = Image.FromFile("D:/Simpanan/Liberay Management System/search.gif");
-                pictureBox1.Image = image;
-            }
         }
 
         int StuId = 0;
@@ -127,9 +114,7 @@ namespace Library
             if(Grid_ViewStudent.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 StuId = int.Parse(Grid_ViewStudent.Rows[e.RowIndex].Cells[0].Value.ToString());
-                //   MessageBox.Show(Grid_viewBook.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
-            PanelData.Visible = true;
             using (SqlConnection conn = new SqlConnection(ConStringHelper.Get()))
             {
                 SqlCommand cmd = new SqlCommand();
@@ -197,7 +182,6 @@ namespace Library
 
         private void Form_ViewStudent_Load(object sender, EventArgs e)
         {
-            PanelData.Visible = false;
             RefreshData();
         }
     }

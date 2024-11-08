@@ -66,7 +66,6 @@ namespace Library
         private void Refresh_Button_Click(object sender, EventArgs e)
         {
             BookNameSearch_text.Clear();
-            PanelData.Visible = false;
             RefreshData();
         }
         private void RefreshData()
@@ -175,7 +174,6 @@ namespace Library
 
         private void Form_ViewBook_Load(object sender, EventArgs e)
         {
-            PanelData.Visible = false;
             RefreshData();
         }
         #endregion
@@ -200,6 +198,11 @@ namespace Library
                 Grid_viewBook.DataSource = ds.Tables[0];
                 CustomGrid();
             }
+        }
+
+        private void PanelData_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
